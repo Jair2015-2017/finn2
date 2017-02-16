@@ -19,21 +19,6 @@
           layout="@layout/barchart_layout" />
    </FrameLayout>
 
-   <FrameLayout
-       android:layout_height="200dp"
-       android:layout_width="200dp"
-       android:layout_alignParentBottom="true"
-       android:layout_alignRight="@+id/frameLayout"
-       android:layout_alignEnd="@+id/frameLayout"
-       android:layout_x="183dp"
-       android:layout_y="152dp">
-
-      <include
-          layout="@layout/piechart_layout"
-           />
-
-   </FrameLayout>
-
    <Button
        android:text="Button"
        android:layout_width="wrap_content"
@@ -47,6 +32,21 @@
        android:id="@+id/button"
        android:layout_x="273dp"
        android:layout_y="486dp" />
+
+   <FrameLayout
+       android:layout_height="200dp"
+       android:layout_width="200dp"
+       android:layout_alignParentBottom="true"
+       android:layout_alignRight="@+id/frameLayout"
+       android:layout_alignEnd="@+id/frameLayout"
+       android:layout_x="86dp"
+       android:layout_y="67dp">
+
+      <include
+          layout="@layout/piechart_layout"
+           />
+
+   </FrameLayout>
 
 
 </AbsoluteLayout>

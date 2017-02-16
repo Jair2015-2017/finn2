@@ -14,10 +14,12 @@ import com.example.jair.fin.dao.FinDao;
 import com.example.jair.fin.dto.olap.Rapport;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.jjoe64.graphview.GraphView;
@@ -38,7 +40,7 @@ public class RapportFragment extends Fragment {
         // Required empty public constructor
     }
 
-    Rapport rapport;
+    PieChart pieChart;
 
 
     @Override
@@ -100,10 +102,54 @@ public class RapportFragment extends Fragment {
         series.setDrawValuesOnTop(true);
         series.setValuesOnTopColor(Color.RED);
 
+        pieChart=(PieChart)view.findViewById(R.id.piechart);
 
+        pieChart.setHoleRadius(50f);
+        pieChart.setTransparentCircleAlpha(25);
+        pieChart.setCenterText("cool");
+        pieChart.setCenterTextSize(20);
+
+
+addDataset(pieChart);
         return view;
     }
+    private void addDataset(PieChart pieChart) {
 
+        float[] percentages = {23f,17f,60f};
+        String [] names = {"messi","neymar","suarez"};
+
+        ArrayList<PieEntry> yEntries=new ArrayList<>();
+        ArrayList<String> xEntries=new ArrayList<>();
+
+        for (int i = 0 ; i<percentages.length;i++){
+
+            yEntries.add(new PieEntry(percentages[i],i));
+        }
+        for (int i = 0 ; i<names.length ; i++){
+
+            xEntries.add((names[i]));
+        }
+
+        PieDataSet pieDataSet= new PieDataSet(yEntries,"shots on target");
+        pieDataSet.setSliceSpace(2);
+        pieDataSet.setValueTextSize(12);
+
+        ArrayList<Integer> colors =new ArrayList<>();
+        colors.add(Color.BLUE);
+        colors.add(Color.RED);
+        colors.add(Color.YELLOW);
+
+        pieDataSet.setColors(colors);
+
+        Legend legend = pieChart.getLegend();
+        legend.setForm(Legend.LegendForm.CIRCLE);
+        legend.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
+
+        PieData pieData= new PieData(pieDataSet);
+        pieChart.setData(pieData);
+        pieChart.invalidate();
+
+    }
 
 
 }
