@@ -1,0 +1,52 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jair.fin.fragments.RapportFragment">
+
+   <FrameLayout
+       android:layout_width="250dp"
+       android:layout_height="200dp"
+       android:layout_marginBottom="22dp"
+       android:layout_above="@+id/frameLayout3"
+       android:layout_alignRight="@+id/button"
+       android:layout_alignEnd="@+id/button"
+       android:layout_x="4dp"
+       android:layout_y="366dp">
+
+      <include
+          android:id="@+id/include_id"
+          layout="@layout/barchart_layout" />
+   </FrameLayout>
+
+   <FrameLayout
+       android:layout_height="200dp"
+       android:layout_width="200dp"
+       android:layout_alignParentBottom="true"
+       android:layout_alignRight="@+id/frameLayout"
+       android:layout_alignEnd="@+id/frameLayout"
+       android:layout_x="183dp"
+       android:layout_y="152dp">
+
+      <include
+          layout="@layout/piechart_layout"
+           />
+
+   </FrameLayout>
+
+   <Button
+       android:text="Button"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentEnd="true"
+       android:layout_marginRight="33dp"
+       android:layout_marginEnd="33dp"
+       android:layout_marginBottom="27dp"
+       android:id="@+id/button"
+       android:layout_x="273dp"
+       android:layout_y="486dp" />
+
+
+</AbsoluteLayout>
