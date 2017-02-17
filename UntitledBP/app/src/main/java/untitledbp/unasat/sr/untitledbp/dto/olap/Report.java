@@ -1,8 +1,8 @@
-package untitledbp.unasat.sr.untitledbp.db.dto.olap;
+package untitledbp.unasat.sr.untitledbp.dto.olap;
 
-import untitledbp.unasat.sr.untitledbp.db.dto.oltp.Category;
-import untitledbp.unasat.sr.untitledbp.db.dto.oltp.Transaction;
-import untitledbp.unasat.sr.untitledbp.db.dto.oltp.User;
+import untitledbp.unasat.sr.untitledbp.dto.oltp.Category;
+import untitledbp.unasat.sr.untitledbp.dto.oltp.Transaction;
+import untitledbp.unasat.sr.untitledbp.dto.oltp.User;
 
 /**
  * Created by Jair on 2/16/2017.

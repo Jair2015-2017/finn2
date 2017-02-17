@@ -1,4 +1,4 @@
-package untitledbp.unasat.sr.untitledbp.db.dto.oltp;
+package untitledbp.unasat.sr.untitledbp.dto.oltp;
 
 /**
  * Created by Jair on 2/16/2017.
