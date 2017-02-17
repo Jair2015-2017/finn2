@@ -55,7 +55,7 @@ public class Schema {
                         + CAT_DESCR +" string , "
                         + BUDGET +" string, "
                         +USER_ID +" string not null, "
-                        +"FOREIGN KEY ("+USER_ID+") REFERENCES "+CAT_TABLE+"("+USER_ID+"); ";
+                        +"FOREIGN KEY ("+USER_ID+") REFERENCES "+CAT_TABLE+"("+USER_ID+")); ";
 
         public static final String DROP_CATTABLE = "drop table if exists "+CAT_TABLE;
     }
@@ -75,7 +75,7 @@ public class Schema {
                         + TRAN_AMOUNT +" double, "
                         +DATE +" string not null, "
                         +CAT_ID +" integer, "
-                        +"FOREIGN KEY ("+CAT_ID+") REFERENCES "+CAT_TABLE+"("+CAT_ID+"); ";
+                        +"FOREIGN KEY ("+CAT_ID+") REFERENCES "+CAT_TABLE+"("+CAT_ID+"));";
 
         public static final String DROP_TRANTABLE = "drop table if exists "+TRAN_TABLE;
 
@@ -102,12 +102,12 @@ public class Schema {
     }
 
     public class SchemaReport {
-        public static final String REP_TABLE = "user_table";
+        public static final String REP_TABLE = "rep_table";
         public static final String REPORT_ID = "report_id";
-        public static final String DAY = "username";
-        public static final String WEEK = "password";
-        public static final String MONTH = "name_user";
-        public static final String YEAR = "surname";
+        public static final String DAY = "day";
+        public static final String WEEK = "week";
+        public static final String MONTH = "month";
+        public static final String YEAR = "year";
 
         public static final String CREATE_REPTABLE =
                 "create table "+ REP_TABLE +" ( "+ REPORT_ID +" integer primary key, "
