@@ -56,8 +56,8 @@ public class Schema {
                         +TRAN_DATE+" DOUBLE, "
                         +USER_FK+" INTEGER, "
                         +CAT_FK+" INTEGER, "+
-                        "FOREIGN KEY ("+CAT_FK+") REFERENCES "+CAT_TABLE+"("+CAT_ID+") "+
-                        "FOREIGN KEY ("+USER_FK+") REFERENCES "+USER_TABLE+"("+ID+"));";
+                            "FOREIGN KEY ("+CAT_FK+") REFERENCES "+CAT_TABLE+"("+CAT_ID+") "+
+                            "FOREIGN KEY ("+USER_FK+") REFERENCES "+USER_TABLE+"("+ID+"));";
 
 
         public static final String SQL_TRAN_TABLE_DROP = "DROP TABLE IF EXISTS "+TRAN_TABLE;
