@@ -27,6 +27,9 @@ public class Schema {
         public static final String EMAIL = "email";
         public static final String CREATED = "created";
         public static final String DELETED = "deleted";
+        public static final String OPENING = "opening";
+        public static final String TRANSACTIONS = "transactions";
+        public static final String CLOSING = "closing";
 
         public static final String CREATE_USERTABLE =
                 "create table "+USER_TABLE+" ( "+ USER_ID +" integer primary key, "
@@ -35,6 +38,9 @@ public class Schema {
                                 +NAME_USER+" string , "
                                 +SURNAME+" string , "
                                 +EMAIL+" string , "
+                                +OPENING+" double , "
+                                +TRANSACTIONS+" double , "
+                                +CLOSING+" double , "
                                 +CREATED+" string not null, "
                                 +DELETED+" string); ";
 
@@ -78,26 +84,6 @@ public class Schema {
                         +"FOREIGN KEY ("+CAT_ID+") REFERENCES "+CAT_TABLE+"("+CAT_ID+"));";
 
         public static final String DROP_TRANTABLE = "drop table if exists "+TRAN_TABLE;
-
-    }
-
-    public class SchemaBalance {
-        public static final String BAL_TABLE = "balance_table";
-        public static final String BAL_ID = "bal_id";
-        public static final String OPENING = "opening";
-        public static final String TRANSACTIONS = "transactions";
-        public static final String CLOSING = "closing";
-
-
-        public static final String CREATE_BALTABLE =
-                "create table "+ BAL_TABLE +" ( "+ BAL_ID +" integer primary key, "
-                        + OPENING +" double, "
-                        + TRANSACTIONS +" double, "
-                        + CLOSING +" double , "
-                        +USER_ID+" integer); ";
-
-        public static final String DROP_BALTABLE = "drop table if exists "+ BAL_TABLE;
-
 
     }
 

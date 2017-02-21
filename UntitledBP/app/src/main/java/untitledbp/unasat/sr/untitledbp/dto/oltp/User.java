@@ -11,6 +11,9 @@ public class User {
     private String password;
     private String email;
     private String created;
+    private double opening;
+    private double transactions;
+    private double closing;
 
     //additional info
     private String nameUser;
@@ -25,19 +28,25 @@ public class User {
         //default constructor
     }
 
-    public User(int id, String username, String password, String created) {
+    public User(int id, String username, String password, String created, double opening, double transactions, double closing) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.created = created;
+        this.opening = opening;
+        this.transactions = transactions;
+        this.closing = closing;
     }
 
-    public User(int id, String username, String password, String email, String created, String nameUser, String surname, String birthDate, String gender) {
+    public User(int id, String username, String password, String email, String created, double opening, double transactions, double closing, String nameUser, String surname, String birthDate, String gender) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
         this.created = created;
+        this.opening = opening;
+        this.transactions = transactions;
+        this.closing = closing;
         this.nameUser = nameUser;
         Surname = surname;
         this.birthDate = birthDate;
@@ -82,6 +91,30 @@ public class User {
 
     public void setCreated(String created) {
         this.created = created;
+    }
+
+    public double getOpening() {
+        return opening;
+    }
+
+    public void setOpening(double opening) {
+        this.opening = opening;
+    }
+
+    public double getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(double transactions) {
+        this.transactions = transactions;
+    }
+
+    public double getClosing() {
+        return closing;
+    }
+
+    public void setClosing(double closing) {
+        this.closing = closing;
     }
 
     public String getNameUser() {

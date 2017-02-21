@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import static untitledbp.unasat.sr.untitledbp.db.schema.Schema.DATABASE_NAME;
 import static untitledbp.unasat.sr.untitledbp.db.schema.Schema.DATABASE_VERSION;
-import static untitledbp.unasat.sr.untitledbp.db.schema.Schema.SchemaBalance.CREATE_BALTABLE;
 import static untitledbp.unasat.sr.untitledbp.db.schema.Schema.SchemaCategory.CREATE_CATTABLE;
 import static untitledbp.unasat.sr.untitledbp.db.schema.Schema.SchemaReport.CREATE_REPTABLE;
 import static untitledbp.unasat.sr.untitledbp.db.schema.Schema.SchemaTransaction.CREATE_TRANTABLE;
@@ -29,7 +28,6 @@ public class Dao extends SQLiteOpenHelper{
         db.execSQL(CREATE_USERTABLE);
         db.execSQL(CREATE_TRANTABLE);
         db.execSQL(CREATE_CATTABLE);
-        db.execSQL(CREATE_BALTABLE);
         db.execSQL(CREATE_REPTABLE);
 
        // setDefaultCategories();
